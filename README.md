@@ -25,9 +25,9 @@ a `build.zig.zon`
 
 	```zig
         .macos = .{
-            .path = "../../mac-zig/pkg/macos",
+            .path = "../../ghostpkg/macos",
         },
-        .apple_sdk = .{ .path = "../../mac-zig/pkg/apple-sdk" },
+        .apple_sdk = .{ .path = "../../ghostpkg/apple-sdk" },
 	```
 
 - check this into your existing project with `git-subtree`. (`git-subtree` nerd-sniped me while preparing
