@@ -35,7 +35,7 @@ this repo because it showed up in a web search for "how do I make a subtree of a
 a clean repository:
 
 	```bash
-git subtree add --prefix=pkg --squash https://github.com/rjkroege/ghostpkg.git HEAD
+	git subtree add --prefix=pkg --squash https://github.com/rjkroege/ghostpkg.git HEAD
 	```
 
 - check into your existing project with however `git-submodule` does it. 😊
