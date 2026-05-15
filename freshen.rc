@@ -1,0 +1,19 @@
+#!/usr/local/bin/rc
+
+builtin cd ..
+git clone https://github.com/ghostty-org/ghostty.git upstreamghostty
+builtin cd upstreamghostty
+git filter-repo --path pkg
+
+builtin cd ../ghostpkg
+git remote add upstreamghostty ../upstreamghostty
+git fetch upstreamghostty
+if (! git rebase upstreamghostty/main) {
+	echo 'git rebase failed, aborting'
+	exit 1
+}
+git push --force origin HEAD
+git remote remove upstreamghostty
+
+builtin cd ..
+rm -rf upstreamghostty
